@@ -22,11 +22,20 @@
     <!-- ข้อความเดิมของพี่ก้อง -->
     <span>คณาทรัพย์ โฟรเซ่น ฟู๊ด จำกัด</span>
 </div>
-        <ul>
+    <button class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="เปิดเมนู"
+        aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+    </button>
+        <ul id="navMenu">
             <li><a href="#home">หน้าแรก</a></li>
             <li><a href="#about">เกี่ยวกับเรา</a></li>
             <li><a href="#products">แนะนำสินค้า</a></li>
-            <li><a href="#contact">ติดต่อเรา</a></li>
+            <li><a href="#footer-zone">ติดต่อเรา</a></li>
         </ul>
     </nav>
 
@@ -35,10 +44,10 @@
 
     <!-- รูป Banner -->
     <div class="hero-slider">
-        <div class="hero-slide active" style="background-image: url('banner1.png.png');"></div>
+        <div class="hero-slide active" style="background-image: url('banner1.png.jpg');"></div>
         <div class="hero-slide" style="background-image: url('banner2.png.png');"></div>
         <div class="hero-slide" style="background-image: url('banner3.png.png');"></div>
-        <div class="hero-slide" style="background-image: url('banner4.png.png');"></div>
+        <div class="hero-slide" style="background-image: url('banner4.png.jpg');"></div>
     </div>
 
     <!-- ชั้นมืดสำหรับทำให้ตัวหนังสืออ่านง่าย -->
@@ -65,8 +74,33 @@
     </div>
 
 </header>
-
-    <!-- --- ABOUT SECTION (อัปเดตใหม่ดีไซน์แน่นขึ้น) --- -->
+<section id="promotion" class="promo-section">
+    <div class="promo-header">
+        <h2>🔥 โปรโมชั่นสำหรับผู้ประกอบการ</h2>
+        <p>เงื่อนไขการจัดส่งที่ช่วยให้คุณคุมต้นทุนได้ง่ายขึ้น</p>
+    </div>
+    <div class="promo-grid">
+        <div class="promo-card">
+            <div class="promo-icon">🚚</div>
+            <h3>ส่งฟรี เมื่อสั่งครบ 100 กก.</h3>
+            <p>สั่งซื้อตั้งแต่ 100 กิโลกรัมขึ้นไป ไม่คิดค่าลังโฟม</p>
+        </div>
+        <div class="promo-card">
+            <div class="promo-icon">📦</div>
+            <h3>สั่งต่ำกว่า 100 กก.</h3>
+            <p>คิดค่าลังโฟมตามจริง สอบถามรายละเอียดได้ก่อนสั่ง</p>
+        </div>
+        <div class="promo-card">
+            <div class="promo-icon">💬</div>
+            <h3>สอบถามราคาส่ง</h3>
+            <p>ติดต่อเซลล์เพื่อรับราคาตามปริมาณและชนิดสินค้า</p>
+            <button type="button" class="promo-btn"
+             onclick="openSalesPopup('สอบถามสินค้าทั่วไป')">
+            💬 ติดต่อสอบถามเซลล์
+            </button>
+        </div>
+    </div>
+</section>
    <!-- --- ABOUT SECTION (เวอร์ชันปรับเนื้อหาให้แน่นและน่าเชื่อถือ) --- -->
     <section id="about">
         <h2 class="section-title">เรื่องราวและความตั้งใจของเรา</h2>
@@ -113,10 +147,13 @@
         <h3 style="color:#d32f2f; margin: 30px 0 10px 0; border-left: 5px solid #d32f2f; padding-left: 10px; font-weight: 600;">🐷 กลุ่มหมูบดอนามัย</h3>
         <div class="product-grid" style="margin-bottom: 50px;">
             <div class="product-card"onclick="openProductModal('grade-a')">
-                <img src="images/pork-grade-a.jpg.png" alt="หมูบดเกรด A" class="product-img">
+                <img src="images/pork-grade-a.jpg.jpg" alt="หมูบดเกรด A" class="product-img">
                 <div class="product-info">
                     <h3>หมูบดเกรด A</h3>
                     <span class="grade">Premium Quality</span>
+                    <div class="product-price">
+                     ฿70<span>/ กก.</span>
+                    </div>
                     <p>เนื้อแดงคัดพิเศษ ผสมมันน้อย นุ่มฉ่ำเด้งตามธรรมชาติ ไม่แห้งสาก เหมาะสำหรับเมนูพรีเมียม</p>
                     <strong>เมนูแนะนำ:</strong>
                     <ul>
@@ -126,10 +163,13 @@
                 </div>
             </div>
             <div class="product-card"onclick="openProductModal('grade-a-save')">
-                <img src="images/pork_grade_a_save.jpg.png" alt="หมูบดเกรด A ลดต้นทุน" class="product-img">
+                <img src="images/pork_grade_a_save.jpg.jpg" alt="หมูบดเกรด A ลดต้นทุน" class="product-img">
                 <div class="product-info">
                     <h3>หมูบดเกรด A รอง</h3>
                     <span class="grade">Value Pack (แนะนำสำหรับร้านค้า)</span>
+                     <div class="product-price">
+                     ฿65   <span>/ กก.</span>
+                     </div>
                     <p>เนื้อแดงเกรด A คัดพิเศษ บดแบบหยาบเพื่อคงเท็กซ์เจอร์และความเป็นธรรมชาติของเนื้อสัมผัส เห็นเส้นใยเนื้อชัดเจน เหมาะสำหรับเมนูที่ต้องการความรู้สึก "กัดเป็นชิ้น" ไม่ใช่เนื้อบดละเอียดจนเป็นเนื้อเดียว</p>
                     <strong>เมนูแนะนำ:</strong>
                     <ul>
@@ -139,10 +179,13 @@
                 </div>
             </div>
             <div class="product-card"onclick="openProductModal('grade-cc')">
-                <img src="images/pork-grade-b.jpg.png" alt="หมูบดเกรด B" class="product-img">
+                <img src="images/pork-grade-b.jpg.jpg" alt="หมูบดเกรด B" class="product-img">
                 <div class="product-info">
-                    <h3>หมูบดเกรด cc(ลดต้นทุน)</h3>
+                    <h3>หมูบดเกรด cc</h3>
                     <span class="grade">Standard Grade</span>
+                    <div class="product-price">
+                     ฿62   <span>/ กก.</span>
+                    </div>
                     <p>สูตรคุมต้นทุนสำหรับร้านค้าที่ต้องการบริหารต้นทุนวัตถุดิบอย่างมีประสิทธิภาพ ยังคงความสดสะอาดตามมาตรฐานการผลิต เนื้อสัมผัสนุ่มพอดี เหมาะสำหรับเมนูที่ต้องใช้ปริมาณมากในราคาที่คุ้มค่า</p>
                     <strong>เมนูแนะนำ:</strong>
                     <ul>
@@ -152,10 +195,13 @@
                 </div>
             </div>
             <div class="product-card"onclick="openProductModal('grade-c')">
-                <img src="images/pork-grade-c.jpg.png" alt="หมูบดเกรด C" class="product-img">
+                <img src="images/pork-grade-c.jpg.jpg" alt="หมูบดเกรด C" class="product-img">
                 <div class="product-info">
                     <h3>หมูบดเกรด C</h3>
                     <span class="grade">Economy Grade</span>
+                    <div class="product-price">
+                     ฿93  <span>/ กก.</span>
+                    </div>
                     <p>สูตรเน้นคุมงบประมาณขั้นสุด สัดส่วนมันหมูช่วยให้เนื้อสัมผัสนุ่มเด้ง ไม่เหนียว เหมาะสำหรับทำเมนูทอดปริมาณมาก</p>
                     <strong>เมนูแนะนำ:</strong>
                     <ul>
@@ -169,11 +215,14 @@
         <!-- กลุ่มที่ 2: หมูสด/หมูสไลด์ -->
         <h3 style="color:#d32f2f; margin: 30px 0 10px 0; border-left: 5px solid #d32f2f; padding-left: 10px; font-weight: 600;">🥓 กลุ่มหมูสดและหมูสไลด์พรีเมียม</h3>
         <div class="product-grid" style="margin-bottom: 50px;">
-            <div class="product-card">
-                <img src="images/sliced-pork-soup.jpg.png" alt="หมูหั่นแกง" class="product-img">
-                <div class="product-info"onclick="openProductModal('sliced-soup')">
+            <div class="product-card" onclick="openProductModal('sliced-soup')">
+                <img src="images/sliced-pork-soup.jpg.jpg" alt="หมูหั่นแกง" class="product-img">
+                <div class="product-info">
                     <h3>เนื้อหมูหั่นแกง</h3>
                     <span class="grade">คัดชิ้นพร้อมใช้</span>
+                    <div class="product-price">
+                     ฿90  <span>/ กก.</span>
+                    </div>
                     <p>เนื้อหมูหั่นชิ้นสี่เหลี่ยมพอดีคำ ขนาดหนาเท่ากัน ประหยัดเวลาหน้าร้าน สะอาด ปลอดภัย</p>
                     <strong>เมนูแนะนำ:</strong>
                     <ul>
@@ -183,10 +232,13 @@
                 </div>
             </div>
             <div class="product-card"onclick="openProductModal('bacon-slice')">
-                <img src="images/bacon-slice.jpg.png" alt="สามชั้นสไลด์" class="product-img">
+                <img src="images/bacon-slice.jpg.jpg" alt="สามชั้นสไลด์" class="product-img">
                 <div class="product-info">
                     <h3>สามชั้นสไลด์ (500 กรัม)</h3>
                     <span class="grade">ชาบู - หมูกระทะ</span>
+                    <div class="product-price">
+                      ฿85  <span>/ ถาด</span>
+                    </div>
                     <p>สไลด์บางสวยงาม แทรกมันเป็นชั้นพอดี ปิ้งแล้วหอมกรอบ ต้มแล้วนุ่มละมุน</p>
                     <strong>เมนูแนะนำ:</strong>
                     <ul>
@@ -196,10 +248,13 @@
                 </div>
             </div>
             <div class="product-card"onclick="openProductModal('shoulder-slice')">
-                <img src="images/pork-shoulder-slice.jpg alt=สันคอสไลด์.png" alt="สันคอสไลด์" class="product-img">
+                <img src="images/pork-shoulder-slice.jpg alt=สันคอสไลด์.jpg" alt="สันคอสไลด์" class="product-img">
                 <div class="product-info">
                     <h3>สันคอสไลด์ (500 กรัม)</h3>
                     <span class="grade">ชาบู - หมูกระทะ</span>
+                    <div class="product-price">
+                     ฿85    <span>/ ถาด</span>
+                    </div>
                     <p>เนื้อส่วนสันคอคัดพรีเมียม ลายหินอ่อนแทรกมันกำลังดี เนื้อนุ่มไม่เหนียว ไม่เลี่ยน</p>
                     <strong>เมนูแนะนำ:</strong>
                     <ul>
@@ -209,10 +264,13 @@
                 </div>
             </div>
        <div class="product-card"onclick="openProductModal('duo-slice')">
-         <img src="images/pork-shoulder-slice.jpg alt=ชุดสองใจสไลด์.png" alt="ชุดสองใจสไลด์" class="product-img">
+         <img src="images/pork-shoulder-slice.jpg alt=ชุดสองใจสไลด์.jpg" alt="ชุดสองใจสไลด์" class="product-img">
             <div class="product-info">
                 <h3>ชุดสองใจสไลด์ (500 กรัม)</h3>
                 <span class="grade">ชาบู - หมูกระทะ</span>
+                <div class="product-price">
+                 ฿85   <span>/ ถาด</span>
+                </div>
                 <p>อร่อยฟินแบบคูณสองในถาดเดียว! หมูสามชั้นสไลด์ + หมูสันคอสไลด์สไลด์บางนุ่ม ละมุนลิ้น</p>
                 <strong>เมนูแนะนำ:</strong>
                 <ul>
@@ -225,12 +283,15 @@
     </div> 
         <!-- กลุ่มที่ 3: หมูหมัก -->
         <h3 style="color:#d32f2f; margin: 30px 0 10px 0; border-left: 5px solid #d32f2f; padding-left: 10px; font-weight: 600;">🍲 กลุ่มหมูหมักสูตรเด็ด (สายหมูกระทะ)</h3>
-        <div class="product-grid" style="margin-bottom: 50px;">
+        <div class="product-grid" style="margin-bottom: 0;">
             <div class="product-card"onclick="openProductModal('marinated-original')">
-                <img src="images/13767.jpg" alt="หมูหมักนุ่ม" class="product-img">
+                <img src="images/13767 (2).jpg" alt="หมูหมักนุ่ม" class="product-img">
                 <div class="product-info">
                     <h3>🥩 หมูหมักนุ่ม (สูตรออริจินอล)</h3>
                     <span class="grade">หมักเข้าเนื้อ นุ่มเด้ง</span>
+                    <div class="product-price">
+                     ฿72   <span>/ กก.</span>
+                    </div>
                     <p>หมักด้วยกรรมวิธีเฉพาะจนน้ำซอสซึมลึกเข้าเนื้อ รสชาติกลมกล่อม เนื้อนุ่มละมุนลิ้น ไม่เหนียวเหนอะหนะเมื่อโดนความร้อน</p>
                     <strong>เมนูแนะนำ:</strong>
                     <ul>
@@ -244,6 +305,9 @@
                 <div class="product-info">
                     <h3>🥩 หมูหมักงา</h3>
                     <span class="grade">หอมกลิ่นงาคั่วแท้</span>
+                    <div class="product-price">
+                     ฿72   <span>/ กก.</span>
+                    </div>
                     <p>เพิ่มความอร่อยเด่นชัดด้วยน้ำมันงาคุณภาพดีและงาขาวคั่วหอม ๆ ยิ่งปิ้งบนเตาร้อน ๆ ยิ่งส่งกลิ่นหอมชวนทาน</p>
                     <strong>เมนูแนะนำ:</strong>
                     <ul>
@@ -257,6 +321,9 @@
                 <div class="product-info">
                     <h3>🥩 สามชั้นหมักพริกไทยดำ</h3>
                     <span class="grade">เข้มข้น เผ็ดร้อนกำลังดี</span>
+                    <div class="product-price">
+                  ฿72  <span>/ กก.</span>
+                    </div>
                     <p>เนื้อสามชั้นแท้ แทรกมันพอดี คลุกเคล้ากับพริกไทยดำบดหยาบคัดเกรด ซึมลึกเข้าเนื้อและชั้นมัน ให้รสเผ็ดร้อนเข้มข้นตัดมันได้ลงตัว เหมาะสำหรับสายปิ้งย่างที่ชอบรสจัดจ้าน</p>
                     <strong>เมนูแนะนำ:</strong>
                     <ul>
@@ -269,6 +336,9 @@
                 <div class="product-info">
                     <h3>🥩 สามชั้นหมักงา</h3>
                     <span class="grade">กลิ่นหอมงาคั่วแท้</span>
+                    <div class="product-price">
+                      ฿72  <span>/ กก.</span>
+                        </div>
                     <p>คัดเนื้อสามชั้นแท้ แทรกมันเป็นชั้นสวยงาม หมักด้วยน้ำมันงาคุณภาพดีและงาขาวคั่วหอมให้ซึมเข้าเนื้อ เวลาปิ้งไฟจะได้ทั้งความหอมมันจากชั้นไขมันและกลิ่นงาคั่วในตัวเดียว รสสัมผัสเข้มข้นกว่าหมูหมักงาทั่วไป</p>
                     <strong>เมนูแนะนำ:</strong>
                     <ul>
@@ -279,7 +349,34 @@
         </div>
     </section>
    
-
+    <section id="guarantee" class="guarantee-section">
+    <h2>🛡️ การันตีคุณภาพ 100%</h2>
+    <p class="guarantee-intro">หากพบปัญหาสินค้า เช่น เหม็นเขียว หรือสีไม่สวย เรายินดีรับเคลมฟรี ไม่มีเงื่อนไขซับซ้อน</p>
+    <div class="guarantee-grid">
+        <div class="guarantee-card">
+            <div class="promo-icon">⏰</div>
+            <h4>แจ้งเคลมได้ไว</h4>
+            <p>แจ้งปัญหาภายใน 24 ชั่วโมงหลังได้รับสินค้า</p>
+        </div>
+        <div class="guarantee-card">
+            <div class="promo-icon">📸</div>
+            <h4>แค่ถ่ายรูปหรือวิดีโอ</h4>
+            <p>ส่งภาพสินค้าที่พบปัญหาให้เราทางแชทหรือโทร</p>
+        </div>
+        <div class="guarantee-card">
+            <div class="promo-icon">🔄</div>
+            <h4>เปลี่ยนใหม่หรือคืนเงิน</h4>
+            <p>เลือกได้ตามสะดวก เคลมฟรี 100%</p>
+        </div>
+    </div>
+    <div class="promo-cta">
+    <button type="button" class="promo-btn"
+            onclick="openQualityIssuePopup()">
+        🛡️ แจ้งปัญหาคุณภาพสินค้า
+    </button>
+    </div>
+    <p class="guarantee-note">* ไม่รวมกรณีเก็บรักษาสินค้าไม่ถูกวิธีหลังรับของ</p>
+</section>
       <section id="comments" class="comments-section">
 
     <h2 class="section-title">ความคิดเห็นและข้อเสนอแนะ</h2>
@@ -589,7 +686,10 @@
                     <tr><td>ยี่ห้อ</td><td>A&P (คณาทรัพย์ โฟรเซ่น ฟู้ด)</td></tr>
                     <tr><td>น้ำหนักสุทธิ</td><td id="modalWeight"></td></tr>
                     <tr><td>ประเภทเนื้อสัตว์</td><td>เนื้อหมู</td></tr>
-                    <tr><td>เกรด</td><td id="modalGradeText"></td></tr>
+                    <tr>
+                    <td id="modalGradeLabel">ประเภทสินค้า</td>
+                    <td id="modalGradeText"></td>
+                    </tr>
                 </table>
             </div>
 
@@ -607,7 +707,156 @@
                 <h4>📝 รายละเอียดเพิ่มเติม</h4>
                 <p id="modalDesc"></p>
             </div>
+               <div class="modal-contact">
+                <button type="button"
+                        class="promo-btn"
+                        onclick="openSalesPopup(document.getElementById('modalTitle').textContent)">
+                    📞 ติดต่อสอบถามเซลล์
+                </button>
+             </div>
+
+           </div>
         </div>
+    </div>
+    <div id="salesPopup" class="sales-popup-overlay"
+                    aria-hidden="true">
+                    <div class="sales-popup" role="dialog"
+                        aria-modal="true"
+                        aria-labelledby="salesPopupTitle">
+
+                        <button type="button" class="sales-popup-close"
+                                onclick="closeSalesPopup()"
+                                aria-label="ปิดหน้าต่าง">
+                            ×
+                        </button>
+
+                        <h2 id="salesPopupTitle">
+                            สอบถามสเปกและราคา
+                        </h2>
+                        <p>เลือกเซลล์ที่สะดวกติดต่อได้เลย</p>
+
+                        <div class="sales-product">
+                            <strong>สินค้าที่สนใจ</strong>
+                            <div id="salesProductName">สินค้าทั่วไป</div>
+                        </div>
+                         <div class="sales-person">
+                        <h3>👤 เซลล์คนที่ 1</h3>
+
+                        <p>📞 เบอร์โทรศัพท์:
+                          <span>0806547177</span>
+                         </p>
+
+           
+                        <p>🟢 LINE ID:
+                        <span> ton71778</span>
+                        </p>
+
+                         <a class="quality-contact-btn line"
+                        href="https://line.me/ti/p/o-7NOfdsd9"
+                        target="_blank"
+                        rel="noopener">
+                        🟢 ติดต่อผ่าน LINE
+                         </a>
+                </div>
+
+        <!-- เซลล์คนที่ 2 -->
+        <div class="sales-person">
+            <h3>👤 เซลล์คนที่ 2</h3>
+
+            <p>📞 เบอร์โทรศัพท์:
+                <span>0613678013 </span>
+            </p>
+
+
+            <p>🟢 LINE ID:
+                <span>Aomsinmkt </span>
+            </p>
+
+            <a class="quality-contact-btn line"
+               href="https://line.me/ti/p/4kSVqB_Peo"
+               target="_blank"
+               rel="noopener">
+                🟢 ติดต่อผ่าน LINE
+            </a>
+        </div>
+                        
+
+                </div>
+        </div>
+        <div id="qualityIssuePopup"
+     class="sales-popup-overlay"
+     aria-hidden="true"
+     onclick="if(event.target === this) closeQualityIssuePopup()">
+
+    <div class="sales-popup"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="qualityIssueTitle">
+
+        <button type="button"
+                class="sales-popup-close"
+                onclick="closeQualityIssuePopup()"
+                aria-label="ปิดหน้าต่าง">
+            ×
+        </button>
+
+        <h2 id="qualityIssueTitle">🛡️ แจ้งปัญหาคุณภาพสินค้า</h2>
+
+        <p class="sales-popup-desc">
+            หากพบปัญหาสินค้าที่ได้รับ กรุณาติดต่อทีมงานเพื่อแจ้งรายละเอียด
+            และตรวจสอบแนวทางการแก้ไข
+        </p>
+
+        <div class="sales-person">
+            <h3>👤 เซลล์คนที่ 1</h3>
+
+            <p>📞 เบอร์โทรศัพท์:
+                <span>0806547177</span>
+            </p>
+
+           
+            <p>🟢 LINE ID:
+                <span> ton71778</span>
+            </p>
+
+            <a class="quality-contact-btn line"
+               href="https://line.me/ti/p/o-7NOfdsd9"
+               target="_blank"
+               rel="noopener">
+                🟢 ติดต่อผ่าน LINE
+            </a>
+        </div>
+
+        <!-- เซลล์คนที่ 2 -->
+        <div class="sales-person">
+            <h3>👤 เซลล์คนที่ 2</h3>
+
+            <p>📞 เบอร์โทรศัพท์:
+                <span>0613678013 </span>
+            </p>
+
+
+            <p>🟢 LINE ID:
+                <span>Aomsinmkt </span>
+            </p>
+
+            <a class="quality-contact-btn line"
+               href="https://line.me/ti/p/4kSVqB_Peo"
+               target="_blank"
+               rel="noopener">
+                🟢 ติดต่อผ่าน LINE
+            </a>
+        </div>
+
+
+        <div class="sales-product">
+            <strong>ข้อมูลที่ควรเตรียม</strong>
+            <p>
+                ชื่อร้านค้า วันที่ได้รับสินค้า รายการสินค้าที่พบปัญหา
+                และรูปถ่ายหรือวิดีโอประกอบ
+            </p>
+        </div>
+
     </div>
 </div>
     <script>
@@ -641,6 +890,108 @@
             });
         });
     });
+    function openSalesPopup(productName = "สินค้าทั่วไป") {
+    const popup = document.getElementById("salesPopup");
+    const productLabel = document.getElementById("salesProductName");
+
+    if (!popup) return;
+
+    if (productLabel) {
+        productLabel.textContent = productName;
+    }
+
+    popup.classList.add("active");
+    popup.setAttribute("aria-hidden", "false");
+}
+
+function closeSalesPopup() {
+    const popup = document.getElementById("salesPopup");
+    if (!popup) return;
+
+    popup.classList.remove("active");
+    popup.setAttribute("aria-hidden", "true");
+}
+
+document.addEventListener("click", function (event) {
+    const popup = document.getElementById("salesPopup");
+
+    if (popup && event.target === popup) {
+        closeSalesPopup();
+    }
+});
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        closeSalesPopup();
+    }
+});
+    function openSalesPopup(productName = "") {
+    const popup = document.getElementById("salesPopup");
+    const productLabel = document.getElementById("salesProductName");
+
+    if (!popup) return;
+
+    if (productLabel) {
+        productLabel.textContent =
+            productName.trim() || "ไม่ได้ระบุสินค้า";
+    }
+
+    popup.classList.add("active");
+    popup.setAttribute("aria-hidden", "false");
+}
+
+function openQualityIssuePopup() {
+    const popup = document.getElementById("qualityIssuePopup");
+
+    if (!popup) return;
+
+    popup.classList.add("active");
+    popup.setAttribute("aria-hidden", "false");
+}
+
+function closeQualityIssuePopup() {
+    const popup = document.getElementById("qualityIssuePopup");
+
+    if (!popup) return;
+
+    popup.classList.remove("active");
+    popup.setAttribute("aria-hidden", "true");
+}
+
+// ปิดหน้าต่างแจ้งปัญหาเมื่อกดปุ่ม Escape
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        closeQualityIssuePopup();
+    }
+});
+document.addEventListener("DOMContentLoaded", function () {
+
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+if (!menuToggle || !navMenu) return;
+
+menuToggle.addEventListener("click", function () {
+
+    const isOpen = navMenu.classList.toggle("active");
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+
+});
+
+// กดเมนูแล้วปิดเมนูอัตโนมัติ
+navMenu.querySelectorAll("a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        navMenu.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+
+    });
+
+});
+
+});
     </script>
     <script>
     // ข้อมูลสินค้าทั้งหมด — แก้ไข/เพิ่มเติมได้ตามจริง
@@ -648,78 +999,88 @@
         "grade-a": {
             title: "หมูบดเกรด A",
             grade: "Premium Quality",
+            gradeLabel: "เกรดสินค้า",
             weight: "1,000 กรัม",
-            img: "images/pork-grade-a.jpg.png",
+            img: "images/pork-grade-a.jpg.jpg",
             cooking: "ละลายในช่องแช่เย็นล่วงหน้า 6-8 ชั่วโมงก่อนปรุง เหมาะสำหรับนึ่ง ต้ม หรือทำไส้ต่างๆ ที่ต้องการเนื้อสัมผัสละเอียดนุ่ม",
             desc: "เนื้อแดงคัดพิเศษ ผสมมันน้อย นุ่มฉ่ำเด้งตามธรรมชาติ ไม่แห้งสาก เหมาะสำหรับเมนูพรีเมียม"
         },
         "grade-a-save": {
             title: "หมูบดเกรด A รอง",
             grade: "Value Pack (แนะนำสำหรับร้านค้า)",
+            gradeLabel: "เกรดสินค้า",
             weight: "1,000 กรัม",
-            img: "images/pork_grade_a_save.jpg.png",
+            img: "images/pork_grade_a_save.jpg.jpg",
             cooking: "ละลายให้หายเย็นจัดก่อนปรุง เหมาะกับผัด ทอด หรือเมนูที่ต้องการเนื้อสัมผัสแบบเห็นเส้นใย",
             desc: "เนื้อแดงเกรด A คัดพิเศษ บดแบบหยาบเพื่อคงเท็กซ์เจอร์และความเป็นธรรมชาติของเนื้อสัมผัส"
         },
         "grade-cc": {
             title: "หมูบดเกรด CC",
             grade: "Standard Grade",
+            gradeLabel: "เกรดสินค้า",
             weight: "1,000 กรัม",
-            img: "images/pork-grade-b.jpg.png",
+            img: "images/pork-grade-b.jpg.jpg",
             cooking: "เหมาะกับการทอดหรือต้ม สัดส่วนมันช่วยให้เนื้อไม่แห้งระหว่างปรุง",
             desc: "สูตรคุมต้นทุนสำหรับร้านค้าที่ต้องการบริหารต้นทุนวัตถุดิบอย่างมีประสิทธิภาพ"
         },
         "grade-c": {
             title: "หมูบดเกรด C",
             grade: "Economy Grade",
+            gradeLabel: "เกรดสินค้า",
             weight: "1,000 กรัม",
-            img: "images/pork-grade-c.jpg.png",
+            img: "images/pork-grade-c.jpg.jpg",
             cooking: "เหมาะสำหรับเมนูทอดปริมาณมาก เช่น ลูกชิ้น หมูก้อนทอด",
             desc: "สูตรเน้นคุมงบประมาณขั้นสุด สัดส่วนมันหมูช่วยให้เนื้อสัมผัสนุ่มเด้ง ไม่เหนียว"
         },
         "sliced-soup": {
             title: "เนื้อหมูหั่นแกง",
             grade: "คัดชิ้นพร้อมใช้",
+            gradeLabel: "ลักษณะสินค้า",
             weight: "1,000 กรัม",
-            img: "images/sliced-pork-soup.jpg.png",
+            img: "images/sliced-pork-soup.jpg.jpg",
             cooking: "ไม่ต้องละลายก่อนปรุงก็ได้ ใส่ลงหม้อต้ม/แกงได้ทันที เหมาะกับแกงเผ็ด ต้มจืด",
             desc: "เนื้อหมูหั่นชิ้นสี่เหลี่ยมพอดีคำ ขนาดหนาเท่ากัน ประหยัดเวลาหน้าร้าน สะอาด ปลอดภัย"
         },
         "bacon-slice": {
             title: "สามชั้นสไลด์",
             grade: "ชาบู - หมูกระทะ",
+            gradeLabel: "ประเภทสินค้า",
             weight: "500 กรัม",
-            img: "images/bacon-slice.jpg.png",
+            img: "images/bacon-slice.jpg.jpg",
             cooking: "ละลายให้หายเย็นจัด ปิ้งบนเตาไฟกลางจนกรอบนอกนุ่มใน หรือลวกในหม้อชาบู",
             desc: "สไลด์บางสวยงาม แทรกมันเป็นชั้นพอดี ปิ้งแล้วหอมกรอบ ต้มแล้วนุ่มละมุน"
         },
         "shoulder-slice": {
             title: "สันคอสไลด์",
             grade: "ชาบู - หมูกระทะ",
+            gradeLabel: "ประเภทสินค้า",
             weight: "500 กรัม",
-            img: "images/pork-shoulder-slice.jpg alt=สันคอสไลด์.png",
+            img: "images/pork-shoulder-slice.jpg alt=สันคอสไลด์.jpg",
             cooking: "ปิ้งย่างบนเตาไฟกลาง หรือลวกในน้ำซุปร้อนสำหรับชาบู",
             desc: "เนื้อส่วนสันคอคัดพรีเมียม ลายหินอ่อนแทรกมันกำลังดี เนื้อนุ่มไม่เหนียว ไม่เลี่ยน"
         },
         "duo-slice": {
             title: "ชุดสองใจสไลด์",
             grade: "ชาบู - หมูกระทะ",
+            gradeLabel: "ประเภทสินค้า",
             weight: "500 กรัม",
-            img: "images/pork-shoulder-slice.jpg alt=ชุดสองใจสไลด์.png",
+            img: "images/pork-shoulder-slice.jpg alt=ชุดสองใจสไลด์.jpg",
             cooking: "ปิ้งย่างหรือลวกชาบูได้ทั้งคู่ในชุดเดียว เหมาะสำหรับมื้อครอบครัว",
             desc: "อร่อยฟินแบบคูณสองในถาดเดียว หมูสามชั้นสไลด์ + หมูสันคอสไลด์ สไลด์บางนุ่ม ละมุนลิ้น"
         },
         "marinated-original": {
             title: "หมูหมักนุ่ม (สูตรออริจินอล)",
             grade: "หมักเข้าเนื้อ นุ่มเด้ง",
+            gradeLabel: "สูตรหมัก",
             weight: "1000 กรัม",
-            img: "images/13767.jpg",
+            img: "images/13767 (2).jpg ",
             cooking: "ปิ้งย่างบนเตาไฟกลางจนสุกทั่ว ไม่ต้องหมักเพิ่ม พร้อมปรุงทันที",
             desc: "หมักด้วยกรรมวิธีเฉพาะจนน้ำซอสซึมลึกเข้าเนื้อ รสชาติกลมกล่อม เนื้อนุ่มละมุนลิ้น"
          },
         "marinated-sesame-plain": {
             title: "หมูหมักงา",
             grade: "หอมกลิ่นงาคั่วแท้",
+            gradeLabel: "สูตรหมัก",
             weight: "1000 กรัม",
             img: "images/pork-shoulder-slice.jpg",
             cooking: "ปิ้งย่างบนเตาไฟกลาง กลิ่นงาจะหอมชัดขึ้นเมื่อโดนความร้อน เหมาะกับชาบู/หม้อไฟเกาหลีได้ด้วย",
@@ -728,6 +1089,7 @@
         "marinated-sesame-belly": {
             title: "สามชั้นหมักงา",
             grade: "กลิ่นหอมงาคั่วแท้",
+            gradeLabel: "สูตรหมัก",
             weight: "1000 กรัม",
             img: "images/pork-marinated-pepper.jpg",
             cooking: "ปิ้งย่างบนเตาไฟกลาง กลิ่นงาจะหอมชัดขึ้นเมื่อโดนความร้อน",
@@ -736,6 +1098,7 @@
         "marinated-pepper": {
             title: "สามชั้นหมักพริกไทยดำ",
             grade: "เข้มข้น เผ็ดร้อนกำลังดี",
+            gradeLabel: "สูตรหมัก",
             weight: "1000 กรัม",
             img: "images/pork-marinated-sesame-extra.jpg",
             cooking: "ปิ้งย่างบนเตาไฟกลางจนสุกทั่ว เหมาะสำหรับสายรสจัดจ้าน",
@@ -750,6 +1113,7 @@
         document.getElementById('modalImg').src = data.img;
         document.getElementById('modalTitle').textContent = data.title;
         document.getElementById('modalGrade').textContent = data.grade;
+        document.getElementById('modalGradeLabel').textContent = data.gradeLabel;
         document.getElementById('modalGradeText').textContent = data.grade;
         document.getElementById('modalWeight').textContent = data.weight;
         document.getElementById('modalCooking').textContent = data.cooking;
